@@ -134,6 +134,7 @@ item.alpha = 0.0; \
 #endif
 
 //14.判断当前的iPhone设备/系统版本
+#pragma mark -判断当前的iPhone设备/系统版本
 //判断是否为iPhone
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 
@@ -158,6 +159,16 @@ item.alpha = 0.0; \
 //判断 iOS 8 或更高的系统版本
 #define IOS_VERSION_8_OR_LATER (([[[UIDevice currentDevice] systemVersion] floatValue] >=8.0)? (YES):(NO))
 
+// 判断系统版本高于或者低于某一个版本
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+
+
+
 //15.判断是真机还是模拟器
 #if TARGET_OS_IPHONE
 //iPhone Device
@@ -166,6 +177,14 @@ item.alpha = 0.0; \
 #if TARGET_IPHONE_SIMULATOR
 //iPhone Simulator
 #endif
+
+//检测是否是Retina屏幕,是否是iPhone5,是否是iPad
+#pragma mark - 检测是否是Retina屏幕,是否是iPhone5,是否是iPad
+
+#define isRetina ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define isPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
 
 //16.沙盒目录文件
 //获取temp
@@ -186,5 +205,10 @@ item.alpha = 0.0; \
 
 //GCD - 开启异步线程
 #define kDISPATCH_GLOBAL_QUEUE_DEFAULT(globalQueueBlock) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), globalQueueBlocl);
+
+
+
+
+
 
 #endif /* AppMacroDefinitionHeader_h */
