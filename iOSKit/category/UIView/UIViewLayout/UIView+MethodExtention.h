@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIView+LayoutMethods.h"
 
 
 @interface UIView (MethodExtention)
