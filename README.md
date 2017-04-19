@@ -4,21 +4,23 @@
 
 ##Macro 文件下
 
-######AppMacroDefinitionHeader
+###AppMacroDefinitionHeader
 宏定义
 
 --------------------------------------
 ##Category
 
-####UIImage
+###UIImage
+####UIImage+QRenCodeImage生成二维码
 
-######UIImage+QRenCodeImage
-生成二维码
 ---------------------------------------
+
 ##Core
 
 ---------------------------------------
+
 ##UIViewController
 
 ####开元框架RTRootNavigationController
+
 ####UINavgationBar 扩展 UINavigationBar+JStyleExtention
