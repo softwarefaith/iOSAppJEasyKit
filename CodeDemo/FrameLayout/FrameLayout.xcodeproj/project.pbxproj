@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E2AA50A1EA8BA8C004AC174 /* UIView+LayoutMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2AA5051EA8BA8C004AC174 /* UIView+LayoutMethods.m */; };
+		2E2AA50B1EA8BA8C004AC174 /* UIView+LayoutMethodsExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2AA5071EA8BA8C004AC174 /* UIView+LayoutMethodsExtention.m */; };
+		2E2AA50C1EA8BA8C004AC174 /* UIView+MethodExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2AA5091EA8BA8C004AC174 /* UIView+MethodExtention.m */; };
 		2E49142D1EA4624A008231DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E49142C1EA4624A008231DD /* main.m */; };
 		2E4914301EA4624A008231DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E49142F1EA4624A008231DD /* AppDelegate.m */; };
 		2E4914331EA4624A008231DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4914321EA4624A008231DD /* ViewController.m */; };
@@ -14,9 +17,6 @@
 		2E4914381EA4624A008231DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E4914371EA4624A008231DD /* Assets.xcassets */; };
 		2E49143B1EA4624A008231DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E4914391EA4624A008231DD /* LaunchScreen.storyboard */; };
 		2E4914461EA4624A008231DD /* FrameLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4914451EA4624A008231DD /* FrameLayoutTests.m */; };
-		2E4914601EA46D3D008231DD /* UIView+LayoutMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E49145D1EA46D3D008231DD /* UIView+LayoutMethods.m */; };
-		2E4914611EA46D3D008231DD /* UIView+LayoutMethodsExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E49145F1EA46D3D008231DD /* UIView+LayoutMethodsExtention.m */; };
-		2E4914641EA48C44008231DD /* UIView+MethodExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4914631EA48C44008231DD /* UIView+MethodExtention.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +30,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E2AA5041EA8BA8C004AC174 /* UIView+LayoutMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayoutMethods.h"; sourceTree = "<group>"; };
+		2E2AA5051EA8BA8C004AC174 /* UIView+LayoutMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayoutMethods.m"; sourceTree = "<group>"; };
+		2E2AA5061EA8BA8C004AC174 /* UIView+LayoutMethodsExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayoutMethodsExtention.h"; sourceTree = "<group>"; };
+		2E2AA5071EA8BA8C004AC174 /* UIView+LayoutMethodsExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayoutMethodsExtention.m"; sourceTree = "<group>"; };
+		2E2AA5081EA8BA8C004AC174 /* UIView+MethodExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MethodExtention.h"; sourceTree = "<group>"; };
+		2E2AA5091EA8BA8C004AC174 /* UIView+MethodExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MethodExtention.m"; sourceTree = "<group>"; };
 		2E4914281EA4624A008231DD /* FrameLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E49142C1EA4624A008231DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2E49142E1EA4624A008231DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -43,12 +49,6 @@
 		2E4914411EA4624A008231DD /* FrameLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrameLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E4914451EA4624A008231DD /* FrameLayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrameLayoutTests.m; sourceTree = "<group>"; };
 		2E4914471EA4624A008231DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2E49145C1EA46D3D008231DD /* UIView+LayoutMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayoutMethods.h"; sourceTree = "<group>"; };
-		2E49145D1EA46D3D008231DD /* UIView+LayoutMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayoutMethods.m"; sourceTree = "<group>"; };
-		2E49145E1EA46D3D008231DD /* UIView+LayoutMethodsExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayoutMethodsExtention.h"; sourceTree = "<group>"; };
-		2E49145F1EA46D3D008231DD /* UIView+LayoutMethodsExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayoutMethodsExtention.m"; sourceTree = "<group>"; };
-		2E4914621EA48C44008231DD /* UIView+MethodExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MethodExtention.h"; sourceTree = "<group>"; };
-		2E4914631EA48C44008231DD /* UIView+MethodExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MethodExtention.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +69,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E2AA5031EA8BA8C004AC174 /* JEasyFrameLayoutObjC */ = {
+			isa = PBXGroup;
+			children = (
+				2E2AA5041EA8BA8C004AC174 /* UIView+LayoutMethods.h */,
+				2E2AA5051EA8BA8C004AC174 /* UIView+LayoutMethods.m */,
+				2E2AA5061EA8BA8C004AC174 /* UIView+LayoutMethodsExtention.h */,
+				2E2AA5071EA8BA8C004AC174 /* UIView+LayoutMethodsExtention.m */,
+				2E2AA5081EA8BA8C004AC174 /* UIView+MethodExtention.h */,
+				2E2AA5091EA8BA8C004AC174 /* UIView+MethodExtention.m */,
+			);
+			name = JEasyFrameLayoutObjC;
+			path = ../../iOSKit/category/UIView/JEasyFrameLayoutObjC;
+			sourceTree = "<group>";
+		};
 		2E49141F1EA4624A008231DD = {
 			isa = PBXGroup;
 			children = (
-				2E49145B1EA46D3D008231DD /* UIViewLayout */,
+				2E2AA5031EA8BA8C004AC174 /* JEasyFrameLayoutObjC */,
 				2E49142A1EA4624A008231DD /* FrameLayout */,
 				2E4914441EA4624A008231DD /* FrameLayoutTests */,
 				2E4914291EA4624A008231DD /* Products */,
@@ -119,20 +133,6 @@
 				2E4914471EA4624A008231DD /* Info.plist */,
 			);
 			path = FrameLayoutTests;
-			sourceTree = "<group>";
-		};
-		2E49145B1EA46D3D008231DD /* UIViewLayout */ = {
-			isa = PBXGroup;
-			children = (
-				2E49145C1EA46D3D008231DD /* UIView+LayoutMethods.h */,
-				2E49145D1EA46D3D008231DD /* UIView+LayoutMethods.m */,
-				2E49145E1EA46D3D008231DD /* UIView+LayoutMethodsExtention.h */,
-				2E49145F1EA46D3D008231DD /* UIView+LayoutMethodsExtention.m */,
-				2E4914621EA48C44008231DD /* UIView+MethodExtention.h */,
-				2E4914631EA48C44008231DD /* UIView+MethodExtention.m */,
-			);
-			name = UIViewLayout;
-			path = ../../iOSKit/category/UIView/UIViewLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,12 +237,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E4914641EA48C44008231DD /* UIView+MethodExtention.m in Sources */,
+				2E2AA50C1EA8BA8C004AC174 /* UIView+MethodExtention.m in Sources */,
 				2E4914331EA4624A008231DD /* ViewController.m in Sources */,
 				2E4914301EA4624A008231DD /* AppDelegate.m in Sources */,
-				2E4914611EA46D3D008231DD /* UIView+LayoutMethodsExtention.m in Sources */,
+				2E2AA50B1EA8BA8C004AC174 /* UIView+LayoutMethodsExtention.m in Sources */,
 				2E49142D1EA4624A008231DD /* main.m in Sources */,
-				2E4914601EA46D3D008231DD /* UIView+LayoutMethods.m in Sources */,
+				2E2AA50A1EA8BA8C004AC174 /* UIView+LayoutMethods.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +439,7 @@
 				2E49144C1EA4624A008231DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E49144D1EA4624A008231DD /* Build configuration list for PBXNativeTarget "FrameLayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +448,7 @@
 				2E49144F1EA4624A008231DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

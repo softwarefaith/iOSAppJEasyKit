@@ -27,3 +27,33 @@
 - (void)style_resetNavigationBar;
 
 @end
+
+///关键代码
+/*
+
+ // 改变导航栏颜色对应的透明度
+ - (void)scrollViewDidScroll:(UIScrollView *)scrollView
+ {
+ CGFloat offsetY = scrollView.contentOffset.y;
+ // 除数表示 -> 导航栏从完全透明到完全不透明的过渡距离
+ CGFloat alpha = (offsetY - NAVBARCOLOR_CHANGE_POINT) / 64;
+ 
+ if (offsetY > NAVBARCOLOR_CHANGE_POINT) {
+ [self.navigationController.navigationBar wr_setBackgroundColor:[MainNavBarColor colorWithAlphaComponent:alpha]];
+ }
+ else
+ {
+ [self.navigationController.navigationBar wr_setBackgroundColor:[UIColor clearColor]];
+ }
+ }
+
+
+
+
+
+
+
+
+
+
+*/
