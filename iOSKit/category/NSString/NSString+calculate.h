@@ -7,6 +7,10 @@
 
 #import <Foundation/Foundation.h>
 
+/*
+   字符串 数字精确计算，主要使用NSDecimalNumber
+ */
+
 @interface NSString (calculate)
 //加
 - (NSString *)calculateByAdding:(NSString *)stringNumer;

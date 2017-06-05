@@ -8,13 +8,7 @@
 
 #import "UIView+JBage.h"
 
-//
-//  UIBarButtonItem+Badge.m
-//  therichest
-//
-//  Created by Mike on 2014-05-05.
-//  Copyright (c) 2014 Valnet Inc. All rights reserved.
-//
+
 #import <objc/runtime.h>
 
 
