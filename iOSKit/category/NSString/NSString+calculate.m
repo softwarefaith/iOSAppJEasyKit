@@ -100,6 +100,19 @@
     return [num doubleValue];
 }
 
+- (NSString *)positiveFormat:(NSString *)text{
+    if(!text || [text floatValue] == 0){
+        return @"0.00";
+    }
+    if (text.floatValue < 1000) {
+        return  [NSString stringWithFormat:@"%.2f",text.floatValue];
+    };
+    
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    [numberFormatter setPositiveFormat:@",###.00;"];
+    return [numberFormatter stringFromNumber:[NSNumber numberWithDouble:[text doubleValue]]];
+}
+
 
 
 

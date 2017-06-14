@@ -33,7 +33,8 @@
 //转成小数
 - (double)calculateDoubleValue;
 
-
+//显示: 1000 -> 1,000
+- (NSString *)positiveFormat:(NSString *)text;
 
 
 
