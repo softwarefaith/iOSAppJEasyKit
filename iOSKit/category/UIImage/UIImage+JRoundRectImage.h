@@ -13,4 +13,6 @@
 + (UIImage *)imageOfRoundRectWithImage: (UIImage *)image
                                   size: (CGSize)size
                                 radius: (CGFloat)radius;
+
++ (UIImage *)imageUserToCompressForSizeImage:(UIImage *)image newSize:(CGSize)siz;
 @end

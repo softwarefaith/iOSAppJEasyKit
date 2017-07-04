@@ -77,5 +77,39 @@ void addRoundRectToPath(CGContextRef context, CGRect rect, float radius, CGImage
     return img;
 }
 
++ (UIImage *)imageUserToCompressForSizeImage:(UIImage *)image newSize:(CGSize)size {
+    
+    UIImage *newImage = nil;
+    CGSize originalSize = image.size;//获取原始图片size
+    CGFloat originalWidth = originalSize.width;//宽
+    CGFloat originalHeight = originalSize.height;//高
+    
+    if ((originalWidth <= size.width) && (originalHeight <= size.height)) {
+        newImage = image;//宽和高同时小于要压缩的尺寸时返回原尺寸
+    }
+    else{
+        
+        //新图片的宽和高
+        CGFloat scale = MIN((float)size.width/originalWidth, (float)size.height/originalHeight);
+        
+        CGSize newImageSize = CGSizeMake(originalWidth*scale , originalHeight*scale );
+        
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(newImageSize.width , newImageSize.height ), NO, [UIScreen mainScreen].scale);
+        
+        [image drawInRect:CGRectMake(0, 0, newImageSize.width, newImageSize.height) blendMode:kCGBlendModeNormal alpha:1.0];
+        
+        newImage = UIGraphicsGetImageFromCurrentImageContext();
+        
+        if (newImage == nil) {
+            MLLog(@"image ");
+        }
+        UIGraphicsEndImageContext();
+    }
+    
+    return newImage;
+    
+}
+
+
 
 @end
