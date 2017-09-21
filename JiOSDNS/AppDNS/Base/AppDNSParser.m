@@ -6,12 +6,18 @@
 //  Copyright © 2017年 蔡杰. All rights reserved.
 //
 
-#import "AppHostParser.h"
+#import "AppDNSParser.h"
+
+
+
 const static NSString *kAppDNSPodURL = @"http://119.29.29.29/d?dn=";
 #define APPDNSPodURL(host) [NSString stringWithFormat:@"%@%@",kAppDNSPodURL, host]
 
 
-@implementation AppHostParser
+@implementation AppDNSParser
+
+
+
 
 + (NSArray*) ipSynParseWithHost:(NSString*)host {
     if (!([host length] > 0)) {
@@ -47,7 +53,7 @@ const static NSString *kAppDNSPodURL = @"http://119.29.29.29/d?dn=";
     return nil;
 }
 
-+ (void)ipAsynParseWithHost:(NSString*)host withComplete:(AppHostParserCallback)hostCallback {
++ (void)ipAsynParseWithHost:(NSString*)host withComplete:(AppDNSParserCallback)hostCallback {
     if (!([host length] > 0)) {
         if (hostCallback) {
             hostCallback(nil,nil,[NSError errorWithDomain:@"host empty" code:-1 userInfo:nil]);
@@ -60,7 +66,7 @@ const static NSString *kAppDNSPodURL = @"http://119.29.29.29/d?dn=";
         
         if (hostCallback) {
             
-             NSString *ip = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+            NSString *ip = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
             NSArray *separatedArray = [ip componentsSeparatedByString:@","];
             NSArray *ips = [[separatedArray firstObject] componentsSeparatedByString:@";"];
             hostCallback(ips,([separatedArray count] > 1?[separatedArray lastObject]:0),error);
@@ -68,6 +74,7 @@ const static NSString *kAppDNSPodURL = @"http://119.29.29.29/d?dn=";
     }];
     [dataTask resume];
 }
+
 
 
 @end
