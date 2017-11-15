@@ -150,6 +150,21 @@ IMP InterceptorReplaceMethod(SEL selector,
     NSMutableURLRequest *mutableRequest = [request mutableCopy];
     //    //给我们处理过的请求设置一个标识符, 防止无限循环,
     [NSURLProtocol setProperty: @YES forKey: kAppDNSInterceptorKey inRequest: mutableRequest];
+    NSString *originalUrl = mutableRequest.URL.absoluteString;
+    NSURL *url = [NSURL URLWithString:originalUrl];
+
+    NSString *ip = nil; //处理ip映射
+    if (ip) {
+        NSRange hostFirstRange = [originalUrl rangeOfString:url.host];
+        if (NSNotFound != hostFirstRange.location) {
+            NSString *newUrl = [originalUrl stringByReplacingCharactersInRange:hostFirstRange withString:ip];
+            mutableRequest.URL = [NSURL URLWithString:newUrl];
+            [mutableRequest setValue:url.host forHTTPHeaderField:@"host"];
+            // 添加originalUrl保存原始URL
+            [mutableRequest addValue:originalUrl forHTTPHeaderField:@"originalUrl"];
+        }
+    }
+
     return mutableRequest;
 }
 
