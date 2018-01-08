@@ -15,6 +15,7 @@
 		2EBE313C1FFDD7AF005AA761 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBE313B1FFDD7AF005AA761 /* main.m */; };
 		2EBE31461FFDD7AF005AA761 /* AppDeallocTaskHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBE31451FFDD7AF005AA761 /* AppDeallocTaskHelperTests.m */; };
 		2EBE31511FFDD7AF005AA761 /* AppDeallocTaskHelperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBE31501FFDD7AF005AA761 /* AppDeallocTaskHelperUITests.m */; };
+		2EBE31611FFDD839005AA761 /* NSObject+AppDeallocTaskMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBE31601FFDD839005AA761 /* NSObject+AppDeallocTaskMonitor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		2EBE314C1FFDD7AF005AA761 /* AppDeallocTaskHelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppDeallocTaskHelperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EBE31501FFDD7AF005AA761 /* AppDeallocTaskHelperUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDeallocTaskHelperUITests.m; sourceTree = "<group>"; };
 		2EBE31521FFDD7AF005AA761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EBE315F1FFDD839005AA761 /* NSObject+AppDeallocTaskMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+AppDeallocTaskMonitor.h"; sourceTree = "<group>"; };
+		2EBE31601FFDD839005AA761 /* NSObject+AppDeallocTaskMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AppDeallocTaskMonitor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		2EBE31201FFDD7AF005AA761 = {
 			isa = PBXGroup;
 			children = (
+				2EBE315E1FFDD7B6005AA761 /* Source */,
 				2EBE312B1FFDD7AF005AA761 /* AppDeallocTaskHelper */,
 				2EBE31441FFDD7AF005AA761 /* AppDeallocTaskHelperTests */,
 				2EBE314F1FFDD7AF005AA761 /* AppDeallocTaskHelperUITests */,
@@ -130,6 +134,15 @@
 				2EBE31521FFDD7AF005AA761 /* Info.plist */,
 			);
 			path = AppDeallocTaskHelperUITests;
+			sourceTree = "<group>";
+		};
+		2EBE315E1FFDD7B6005AA761 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2EBE315F1FFDD839005AA761 /* NSObject+AppDeallocTaskMonitor.h */,
+				2EBE31601FFDD839005AA761 /* NSObject+AppDeallocTaskMonitor.m */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EBE31611FFDD839005AA761 /* NSObject+AppDeallocTaskMonitor.m in Sources */,
 				2EBE31311FFDD7AF005AA761 /* ViewController.m in Sources */,
 				2EBE313C1FFDD7AF005AA761 /* main.m in Sources */,
 				2EBE312E1FFDD7AF005AA761 /* AppDelegate.m in Sources */,
@@ -432,6 +446,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AppDeallocTaskHelper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Allan.AppDeallocTaskHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -445,6 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AppDeallocTaskHelper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Allan.AppDeallocTaskHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";

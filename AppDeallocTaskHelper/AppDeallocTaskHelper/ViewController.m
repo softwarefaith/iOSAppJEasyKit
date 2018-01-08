@@ -7,6 +7,43 @@
 //
 
 #import "ViewController.h"
+#import "NSObject+AppDeallocTaskMonitor.h"
+
+@interface t1 : NSObject
+
+@end
+
+@implementation t1
+
+
+-(void)dealloc {
+    
+    NSLog(@"我t1没了");
+}
+
+@end
+
+@interface t : NSObject
+
+@property(nonatomic, strong) t1 *t11;
+
+@end
+
+@implementation t
+
+-(instancetype)init {
+    self = [super init];
+    if (self) {
+        _t11 = [[t1 alloc] init];
+    }
+    return self;
+}
+-(void)dealloc {
+    
+    NSLog(@"我没了");
+}
+
+@end
 
 @interface ViewController ()
 
@@ -17,6 +54,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    t  *minitor = [[t  alloc] init];
+    NSLog(@"---syn ");
+    [minitor asynAddDeallocTask:^(__unsafe_unretained id object, NSUInteger identifier) {
+        NSLog(@"syn = %@",@(identifier));
+        
+    }];
+    
+    minitor = nil;
+    
 }
 
 
